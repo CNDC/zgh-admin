@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>忘记密码</title>
+    <link rel="stylesheet" href="../../static/css/login.css">
+</head>
+<body>
+    <div class="section sec-login">
+        <div class="forget-box">
+            <div class="logo"></div>
+            <h3 class="forget-title">找回密码</h3>
+            <div class="forget-content">
+                <div class="inp">
+                    <i class="icon icon-input-email"></i>
+                    <input type="tel" placeholder="手机号/邮箱" maxlength="15" id="phone">
+                </div>
+                <div id="drag">
+                    <!---->
+                </div>
+                <div class="code clearfix hide" id="code">
+                    <div class="inp-code">
+                        <i class="icon icon-input-code"></i>
+                        <input type="tel" placeholder="请输入验证码" maxlength="6">
+                    </div>
+                    <div class="get-code">获取验证码</div>
+                </div>
+                <div class="forget-btn">
+                    <button class="btn btn-next">下一步</button>
+                </div>
+            </div>
+            <p class="introduce">国内首家跨境电商知识分享交流平台</p>
+        </div>
+    </div>
+
+
+    <script src="../../static/js/jquery-1.7.2.min.js"></script>
+    <script src="../../static/js/drag.js"></script>
+    <script>
+        $('#drag').drag();
+    </script>
+</body>
+</html>

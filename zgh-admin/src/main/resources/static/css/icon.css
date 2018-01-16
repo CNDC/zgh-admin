@@ -1,0 +1,238 @@
+/* 文字标题、段落（黑） */
+/* 背景色（灰） */
+/*  图标路径  */
+.icon {
+  display: inline-block;
+  background: url("../image/icon.png");
+  vertical-align: top;
+}
+/* 顶部导航图标 */
+[class*="icon-head"] {
+  width: 20px;
+  height: 20px;
+}
+.icon-head-search {
+  background-position: 0px 0px;
+}
+.icon-head-user {
+  background-position: -20px 0px;
+}
+/* 干货图标 */
+[class*="icon-ds-tag"] {
+  width: 20px;
+  height: 20px;
+}
+.icon-ds-tag-look {
+  background-position: -47px 3px;
+}
+.icon-ds-tag-mes {
+  background-position: -67px 3px;
+}
+/* 大数据图标 */
+[class*="icon-data"] {
+  width: 40px;
+  height: 40px;
+}
+.icon-data-cl {
+  background-position: -85px 0px;
+}
+.icon-data-user {
+  background-position: -124px 0px;
+}
+.icon-data-abc {
+  background-position: -165px 0px;
+}
+.icon-data-xing {
+  background-position: -205px 0px;
+}
+[class*="icon-slider"] {
+  width: 16px;
+  height: 16px;
+}
+.icon-slider-user {
+  background-position: -244px -4px;
+}
+.icon-slider-paper {
+  background-position: -265px -3px;
+}
+[class*="icon-activity"] {
+  width: 22px;
+  height: 22px;
+}
+.icon-activity-time {
+  background-position: -24px -108px;
+}
+.icon-activity-location {
+  background-position: 0px -108px;
+}
+.icon-activity-fx {
+  background-position: 0px -132px;
+}
+.icon-activity-fs {
+  background-position: -24px -132px;
+}
+[class*="icon-ccr-topnav"] {
+  width: 30px;
+  height: 30px;
+}
+.icon-ccl-topnav-one {
+  background-position: -102px -104px;
+}
+.icon-ccl-topnav-two {
+  background-position: -168px -104px;
+}
+.icon-ccl-topnav-three {
+  background-position: -102px -138px;
+}
+.icon-ccl-topnav-four {
+  background-position: -168px -138px;
+}
+.icon-ccl-topnav-five {
+  background-position: -135px -104px;
+}
+.icon-ccl-topnav-six {
+  background-position: -203px -103px;
+}
+.icon-ccl-topnav-seven {
+  background-position: -135px -138px;
+}
+.icon-ccl-topnav-eight {
+  background-position: -203px -138px;
+}
+.icon-ccl-content-sizer {
+  width: 28px;
+  height: 26px;
+  background-position: -49px -135px;
+}
+.icon-ccr-issue {
+  width: 30px;
+  height: 30px;
+  background-position: -251px -70px;
+}
+[class*="icon-input"] {
+  width: 16px;
+  height: 16px;
+}
+.icon-input-email {
+  background-position: -21px -172px;
+}
+.icon-input-pass {
+  background-position: -3px -171px;
+}
+.icon-input-code {
+  background-position: -3px -154px;
+}
+[class*="icon-other"] {
+  width: 30px;
+  height: 30px;
+}
+.icon-other-qq {
+  background-position: -46px -170px;
+}
+.icon-other-wx {
+  background-position: -77px -170px;
+}
+.icon-other-wb {
+  background-position: -108px -170px;
+}
+[class*="icon-data"] {
+  width: 51px;
+  height: 51px;
+}
+.icon-data-one {
+  background-position: -2px -207px;
+}
+.icon-data-two {
+  background-position: -57px -207px;
+}
+.icon-data-three {
+  background-position: -108px -207px;
+}
+.icon-lib-title-big {
+  width: 50px;
+  height: 50px;
+  background-position: -160px -209px;
+}
+.icon-lib-list-tag {
+  width: 45px;
+  height: 25px;
+  background-position: -218px -210px;
+}
+[class*="icon-lib-tag"] {
+  width: 19px;
+  height: 19px;
+}
+.icon-lib-tag-one {
+  background-position: -217px -240px;
+}
+.icon-lib-tag-two {
+  background-position: -239px -240px;
+}
+.icon-lib-tag-three {
+  background-position: -261px -240px;
+}
+[class*="icon-lib-small"] {
+  width: 25px;
+  height: 22px;
+}
+.icon-lib-small-one {
+  background-position: -261px -183px;
+}
+.icon-lib-small-two {
+  background-position: -234px -183px;
+}
+[class*="icon-article-data"] {
+  width: 20px;
+  height: 20px;
+}
+.icon-article-data-look {
+  background-position: -2px -260px;
+}
+.icon-article-data-comment {
+  background-position: -22px -260px;
+}
+.icon-article-data-time {
+  background-position: -42px -262px;
+}
+.icon-article-data-tags {
+  background-position: -65px -261px;
+}
+[class*="icon-share"] {
+  width: 42px;
+  height: 42px;
+}
+.icon-share-qq {
+  background-position: -197px -261px;
+}
+.icon-share-wx {
+  background-position: -197px -304px;
+}
+.icon-share-wb {
+  background-position: -243px -261px;
+}
+[class*="icon-operation"] {
+  width: 25px;
+  height: 25px;
+}
+.icon-operation-zan1 {
+  background-position: -89px -262px;
+}
+.icon-operation-zan2 {
+  background-position: -115px -262px;
+}
+.icon-operation-shou1 {
+  background-position: -141px -262px;
+}
+.icon-operation-shou2 {
+  background-position: -168px -262px;
+}
+.icon-privately-message {
+  width: 34px;
+  height: 26px;
+  background-position: -245px -315px;
+}
+.icon-comment-fine {
+  width: 100px;
+  height: 50px;
+  background-position: -1px -352px;
+}

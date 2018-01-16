@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <link rel="stylesheet" href="../../static/css/login.css">
+</head>
+<body>
+    <div class="section sec-login">
+        <div class="signin-box">
+            <div class="logo"></div>
+            <h3 class="sign-title">手机号/邮箱注册</h3>
+            <div class="sign-nav clearfix">
+                <span class="active">手机注册</span>
+                <span>邮箱注册</span>
+            </div>
+            <div class="sign-tab show">
+                <div class="inp">
+                    <i class="icon icon-input-email"></i>
+                    <input type="tel" placeholder="请输入手机号" maxlength="11">
+                </div>
+                <div class="code clearfix">
+                    <div class="inp-code">
+                        <i class="icon icon-input-code"></i>
+                        <input type="tel" placeholder="请输入验证码" maxlength="6">
+                    </div>
+                    <div class="get-code">获取验证码</div>
+                </div>
+                <div class="inp">
+                    <i class="icon icon-input-pass"></i>
+                    <input type="password" placeholder="请输入密码" maxlength="15">
+                </div>
+                <div class="read clearfix">
+                    <input type="checkbox" id="male" name="mode" class="check"/>
+                    <p>我已阅读并同意<span>《服务条款》</span>和<span>《法律声明》</span></p>
+                </div>
+                <div class="sign-btn">
+                    <button class="btn btn-sign">注册</button>
+                </div>
+                <p class="push-login">已注册？请<span>登录</span></p>
+            </div>
+            <div class="sign-tab">
+                <div class="inp">
+                    <i class="icon icon-input-email"></i>
+                    <input type="email" placeholder="请输入邮箱" maxlength="20">
+                </div>
+                <div class="inp">
+                    <i class="icon icon-input-pass"></i>
+                    <input type="password" placeholder="请输入密码" maxlength="15">
+                </div>
+                <div class="read clearfix">
+                    <input type="checkbox" name="mode" class="check"/>
+                    <p>我已阅读并同意<span>《服务条款》</span>和<span>《法律声明》</span></p>
+                </div>
+                <div class="sign-btn">
+                    <button class="btn btn-sign">注册</button>
+                </div>
+                <p class="push-login">已注册？请<span>   登录</span></p>
+            </div>
+            <p class="introduce">国内首家跨境电商知识分享交流平台</p>
+        </div>
+    </div>
+
+    <script src="../../static/js/jquery-1.7.2.min.js"></script>
+    <script src="../../static/js/placeholders.jquery.min.js"></script>
+    <script>
+        (function () {
+            $(".sign-nav span").click(function () {
+                $(".sign-nav span").eq($(this).index()).addClass("active").siblings().removeClass("active");
+                $(".sign-tab").eq($(this).index()).addClass("show").siblings().removeClass("show");
+            });
+            $(".push-login").click(function () {
+                window.location.href = "login.html";
+            });
+            $(".logo").click(function () {
+                window.location.href = "../index.html";
+            });
+        })();
+        $(function(){ $('input, textarea').placeholder(); });
+    </script>
+</body>
+</html>

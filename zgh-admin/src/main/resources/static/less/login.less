@@ -1,0 +1,323 @@
+@import "comm";
+
+.sec-login{
+  background: url("../image/login/login-bg.jpg") no-repeat;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  background-position: center center;
+  padding-top: 42px;
+  .login-box{
+    padding-top: 60px;
+    .paper;
+    .logo{
+      .logo-style;
+    }
+    .login-title{
+      .paper-title;
+      margin-top: 16px;
+      margin-bottom: 40px;
+    }
+    .login-btn{
+      text-align: center;
+      margin-top: 30px;
+      .btn-login{
+        width: 270px;
+        height: 30px;
+        font-size: 12px;
+        color: #f7f7f7;
+        background-color: #c6c9d1;
+      }
+    }
+    .forget-register{
+      width: 270px;
+      margin: 20px auto 0;
+      font-size: 12px;
+      .forget{
+        cursor: pointer;
+        text-align: left;
+        &:hover{
+          color: @main-color;
+          text-decoration:underline;
+        }
+      }
+      .register{
+        float: right;
+        cursor: pointer;
+        &:hover .change{
+          color: @main-color;
+          text-decoration:underline;
+        }
+      }
+    }
+    .other-title{
+      text-align: center;
+      color: #333;
+      font-weight: normal;
+      margin-top: 35px;
+    }
+    .other-icon{
+      text-align: center;
+      margin-right: -10px;
+      margin-top: 15px;
+      .icon{
+        margin-right: 10px;
+        cursor: pointer;
+      }
+      .icon-other-qq:hover{
+        background-position: -139px -170px;
+      }
+      .icon-other-wx:hover{
+        background-position: -170px -170px;
+      }
+      .icon-other-wb:hover{
+        background-position: -201px -170px;
+      }
+    }
+  }
+  .signin-box{
+    padding-top: 35px;
+    .paper;
+    .logo{
+      margin-top: 20px;
+      .logo-style;
+    }
+    .sign-title{
+      .paper-title;
+      margin-top: 16px;
+      margin-bottom: 25px;
+    }
+    .sign-nav{
+      width: 270px;
+      margin: 0 auto 15px;
+      span{
+        display: block;
+        width: 50%;
+        float: left;
+        text-align: center;
+        color: #666666;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      .active{
+        color: @main-color;
+      }
+    }
+    .sign-tab{
+      width: 270px;
+      height: 250px;
+      margin: 0 auto;
+      //outline:1px solid red;
+      display: none;
+    }
+
+    .read{
+      margin-top: 15px;
+      font-size: 12px;
+      color: #999999;
+      .check{
+        float: left;
+        margin-top: 1px;
+        margin-right: 5px;
+      }
+      p{
+        float: left;
+        span{
+          color: black;
+        }
+      }
+
+    }
+    .sign-btn{
+      text-align: center;
+      margin-top: 25px;
+      .btn-sign{
+        width: 270px;
+        height: 30px;
+        font-size: 12px;
+        color: #f7f7f7;
+        background-color: #250d46;
+        .border-radius(3px);
+      }
+    }
+    .push-login{
+      margin-top: 20px;
+      text-align: center;
+      font-size: 12px;
+      cursor: pointer;
+      &:hover span{
+        color: @main-color;
+        text-decoration:underline;
+      }
+    }
+  }
+  .forget-box{
+    padding-top: 50px;
+    .paper;
+    .logo{
+      .logo-style;
+    }
+    .forget-title{
+      margin-top: 15px;
+      .paper-title;
+    }
+    .forget-content{
+      height: 230px;
+      width: 270px;
+      margin: 40px auto 0;
+      .forget-btn{
+        text-align: center;
+        margin-top: 25px;
+        .btn-next{
+          width: 270px;
+          height: 30px;
+          font-size: 12px;
+          color: #f7f7f7;
+          background-color: #c6c9d1;
+          .border-radius(3px);
+        }
+      }
+
+    }
+  }
+
+}
+
+.paper{
+  overflow: hidden;
+  width: 430px;
+  height: 550px;
+  background-color: @white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -275px;
+  margin-left: -215px;
+  .box-shadow(0px 0px 10px 3px #999);
+}
+.logo-style{
+  width: 64px;
+  height: 58px;
+  background: url("../image/login/logo.png") no-repeat;
+  cursor: pointer;
+  margin: 0 auto;
+}
+.paper-title{
+  text-align: center;
+  font-size: 24px;
+  font-weight: normal;
+  color: #666666;
+}
+.inp{
+  width: 270px;
+  height: 30px;
+  background: #eff0f4;
+  margin: 15px auto 0;
+  .border-radius(3px);
+  line-height: 30px;
+  .icon{
+    margin-top: 7px;
+    margin-left: 15px;
+    margin-right: 5px;
+  }
+  input{
+    height: 20px;
+    width: 75%;
+    outline: none;
+    border: none;
+    background: none;
+  }
+}
+.introduce{
+  text-align: center;
+  color: #666666;
+  margin-top: 20px;
+}
+.code{
+  width: 100%;
+  height: 30px;
+  margin-top: 15px;
+  .inp-code{
+    float: left;
+    width: 170px;
+    height: 100%;
+    background: #eff0f4;
+    .border-radius(3px);
+    line-height: 30px;
+    .icon{
+      margin-top: 7px;
+      margin-left: 15px;
+      margin-right: 5px;
+    }
+    input{
+      height: 20px;
+      width: 120px;
+      outline: none;
+      border: none;
+      background: none;
+    }
+  }
+  .get-code{
+    width: 90px;
+    height: 100%;
+    float: right;
+    background-color: #ff6655;
+    text-align: center;
+    line-height: 30px;
+    color: @white;
+    font-size: 12px;
+    .border-radius(3px);
+    cursor: pointer;
+  }
+}
+.check{
+
+}
+
+
+
+#drag{
+  position: relative;
+  background-color: #e8e8e8;
+  width: 100%;
+  height: 30px;
+  text-indent: 40px;
+  line-height: 30px;
+  margin-top: 15px;
+  .border-radius(3px);
+  cursor: pointer;
+}
+#drag .handler{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 35px;
+  height: 30px;
+
+  .border-radius(3px);
+  cursor: move;
+}
+.handler_bg{
+  background: @main-color url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAYAAAA7bUf6AAABYElEQVQ4jYWTv0pcQRjFf1cx7qIWgiABKwvzAnZpg40pEhsb3SYLWmmjRXwFA8kTBGyF9ImCSQpfQEJEEIJutBQDQYkr+Vnsd/E63MED05xz5nx/mEGl5rxWP6kX9nCjflYX6vwp8UL97T3O1H31sML9iSK1IW8qxlV1NCnQUFvRlepaGvI8hJ/qWGbE8gyoX8L/SqVQAS6AUaAB/KOHYeBJaHX4CwwBBerLSF1JKr4LfjbT0UzobSqtpaZptRvaUiaoqx6h3qonGdO4ehBBG2p/ou+V1VV3H1nm//BNJfxH1b5Y0mRmeU1gByiAD8Bpoj8FQP2e2ckz9bwySl2HV2oHdT6Mi4nhffCtTMB06GvlO7kG+uNdlBgHRoDjzKgdYAIYLFNnI/WbWjyyZNSt8LdN/s7bEC7VuczlGfVX+DZLPjUt+BBf1e1Y/m2FX67eq6vWtPeLD3yIH+q6OpLeuQOfrijP6yfl/gAAAABJRU5ErkJggg==") no-repeat center;
+}
+.handler_ok_bg{
+  background: #FFF url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA3hpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NTc3MiwgMjAxNC8wMS8xMy0xOTo0NDowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo0ZDhlNWY5My05NmI0LTRlNWQtOGFjYi03ZTY4OGYyMTU2ZTYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NDlBRDI3NjVGMkQ2MTFFNEI5NDBCMjQ2M0ExMDQ1OUYiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NDlBRDI3NjRGMkQ2MTFFNEI5NDBCMjQ2M0ExMDQ1OUYiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKE1hY2ludG9zaCkiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDphNWEzMWNhMC1hYmViLTQxNWEtYTEwZS04Y2U5NzRlN2Q4YTEiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NGQ4ZTVmOTMtOTZiNC00ZTVkLThhY2ItN2U2ODhmMjE1NmU2Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+k+sHwwAAASZJREFUeNpi/P//PwMyKD8uZw+kUoDYEYgloMIvgHg/EM/ptHx0EFk9I8wAoEZ+IDUPiIMY8IN1QJwENOgj3ACo5gNAbMBAHLgAxA4gQ5igAnNJ0MwAVTsX7IKyY7L2UNuJAf+AmAmJ78AEDTBiwGYg5gbifCSxFCZoaBMCy4A4GOjnH0D6DpK4IxNSVIHAfSDOAeLraJrjgJp/AwPbHMhejiQnwYRmUzNQ4VQgDQqXK0ia/0I17wJiPmQNTNBEAgMlQIWiQA2vgWw7QppBekGxsAjIiEUSBNnsBDWEAY9mEFgMMgBk00E0iZtA7AHEctDQ58MRuA6wlLgGFMoMpIG1QFeGwAIxGZo8GUhIysmwQGSAZgwHaEZhICIzOaBkJkqyM0CAAQDGx279Jf50AAAAAABJRU5ErkJggg==") no-repeat center;
+  border: 1px solid #7AC23C;
+}
+#drag .drag_bg{
+  background-color: #7AC23C;
+  height: 30px;
+  width: 0;
+}
+#drag .drag_text{
+  position: absolute;
+  top: 0px;
+  width: 300px;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  -o-user-select:none;
+  -ms-user-select:none;
+}

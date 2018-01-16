@@ -1,0 +1,112 @@
+@import "base";
+@import "icon";
+
+.header {
+  width: 100%;
+  height: 80px;
+  background-color: @white;
+  position: fixed;
+  top:0;
+  left: 0;
+  z-index: 999;
+  .head-box {
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    .head-logo {
+      width: 58px;
+      height: 50px;
+      background: url("../image/logo.png") no-repeat;
+      float: left;
+      margin: 15px 0 0 15px;
+      cursor: pointer;
+    }
+    .head-nav {
+      float: left;
+      overflow: hidden;
+      margin-left: 10px;
+      li {
+        display: inline-block;
+        line-height: 80px;
+        float: left;
+        padding: 0 30px;
+        color: @black;
+        font-size: 18px;
+        &:hover {
+          color: @main-color;
+          cursor: pointer;
+        }
+      }
+      .active {
+        color: @main-color;
+      }
+    }
+    .head-tool {
+      float: right;
+      margin-right: 15px;
+      .search-box {
+        width: 185px;
+        height: 20px;
+        position: relative;
+        margin-top: 30px;
+        float: left;
+        &:before {
+          content: '';
+          width: 1px;
+          height: 30px;
+          position: absolute;
+          background: #e4e4e4;
+          left: 0;
+          top: -5px;
+        }
+        input {
+          width: 120px;
+          font-size: 12px;
+          margin-left: 15px;
+          border: none;
+          outline: none;
+          background: none;
+        }
+        ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+          color: #e4e4e4;
+        }
+        :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+          color: #e4e4e4;
+        }
+        ::-moz-placeholder { /* Mozilla Firefox 19+ */
+          color: #e4e4e4;
+        }
+        :-ms-input-placeholder { /* Internet Explorer 10-11 */
+          color: #e4e4e4;
+        }
+        .icon {
+          margin-left: 10px;
+          cursor: pointer;
+        }
+      }
+      .login-box {
+        float: left;
+        height: 20px;
+        margin-top: 30px;
+        position: relative;
+        &:before {
+          content: '';
+          position: absolute;
+          width: 1px;
+          height: 30px;
+          background: #e4e4e4;
+          left: 0;
+          top: -5px;
+        }
+        .icon {
+          margin-left: 15px;
+        }
+        span {
+          color: @main-color;
+          cursor: pointer;
+        }
+      }
+
+    }
+  }
+}

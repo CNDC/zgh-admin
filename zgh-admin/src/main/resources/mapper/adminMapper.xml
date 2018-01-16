@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="UserMapper">
+    <resultMap id="BaseResultMap" type="com.uintell.demo.bean.Admin">
+        <id column="id" property="id" jdbcType="BIGINT"/>
+        <result column="user_name" property="userName" jdbcType="VARCHAR"/>
+        <result column="user_password" property="userPassword" jdbcType="VARCHAR"/>
+        <result column="user_real_name" property="userRealName" jdbcType="VARCHAR"/>
+        <result column="user_phone" property="userPhone" jdbcType="VARCHAR"/>
+        <result column="user_desc" property="userDesc" jdbcType="VARCHAR"/>
+        <result column="create_by" property="createBy" jdbcType="VARCHAR"/>
+        <result column="user_create" property="userCreate" jdbcType="TIMESTAMP"/>
+        <result column="modified_by" property="modifiedBy" jdbcType="VARCHAR"/>
+        <result column="user_modified" property="userModified" jdbcType="TIMESTAMP"/>
+        <result column="is_valid" property="isValid" jdbcType="BIT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id, user_name, user_password, user_real_name, user_phone, user_desc, create_by, user_create,
+        modified_by, user_modified, is_valid, company_code
+    </sql>
+
+    <sql id="selectAdminByUsernameAndPassword">
+        SELECT
+        <include refid="Base_Column_List"/>
+        from zgh_user where user_name=#{username,jdbcType=varchar} and user_password=#{password,jdbcType=varchar}
+    </sql>
+</mapper>

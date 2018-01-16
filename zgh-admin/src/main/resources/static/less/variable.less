@@ -1,0 +1,51 @@
+
+@white: #ffffff;
+@black: #000000;
+@main-color: #ff8c1e;
+
+/* 文字标题、段落（黑） */
+@main-title:#333;
+@main-text: #666666;
+@main-mes:#999;
+
+/* 背景色（灰） */
+@bgc:#f8f8f8;
+
+/*  图标路径  */
+@image: '../image';
+
+.box-shadow(@content) {
+  -webkit-box-shadow: @content;
+  -moz-box-shadow: @content;
+  -o-box-shadow: @content;
+  box-shadow: @content;
+}
+
+.border-radius(@radius:5px) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  border-radius: @radius;
+}
+
+.transform(@content){
+  -webkit-transform: @content;
+  -moz-transform: @content;
+  -ms-transform: @content;
+  -o-transform: @content;
+  transform: @content;
+}
+
+.transition(@content){
+  transition: @content;
+  -webkit-transition: @content;
+  -moz-transition: @content;
+  -o-transition: @content;
+}
+
+
+.opacity(@number) {
+  opacity: @number;
+  -webkit-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=ceil(@number*100));
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=ceil(@number*100));
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=ceil(@number*100));
+}

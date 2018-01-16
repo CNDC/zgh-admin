@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <link rel="stylesheet" href="../../static/css/login.css">
+</head>
+<body>
+<div class="section sec-login">
+    <div class="login-box">
+        <div class="logo"></div>
+        <h3 class="login-title">欢迎进入BIG3</h3>
+        <div class="tel-inp inp">
+            <i class="icon icon-input-email"></i>
+            <input type="tel" name="telephone" id="telephone" placeholder="手机号/邮箱" maxlength="11">
+        </div>
+        <div class="pass-inp inp">
+            <i class="icon icon-input-pass"></i>
+            <input type="password" name="password" id="password" placeholder="密码" maxlength="15">
+        </div>
+        <div class="login-btn">
+            <button class="btn btn-login" id="login">登录</button>
+        </div>
+        <div class="forget-register clearfix">
+            <span class="forget">忘记密码？</span>
+            <span class="register">新用户？请 <span class="change">注册</span></span>
+        </div>
+        <h4 class="other-title">使用社交账号登录</h4>
+        <p class="other-icon">
+            <i class="icon icon-other-qq"></i>
+            <i class="icon icon-other-wx"></i>
+            <i class="icon icon-other-wb"></i>
+        </p>
+        <p class="introduce">国内首家跨境电商知识分享交流平台</p>
+    </div>
+</div>
+<script src="../../static/js/jquery-1.7.2.min.js"></script>
+<script src="../../static/js/placeholders.jquery.min.js"></script>
+<script src="../../static/js/main.js"></script>
+<script>
+    $(function () {
+        $('#login').click(function () {
+            $.ajax({
+                type: "GET",
+                url:"../../api/v1/user/login",
+                data: {telephone: $("#telephone").val(), password: $("#password").val()},
+                dataType: "json",
+                success: function (data) {
+                    if (data.status == 200) {
+                        //登录成功要做的事情
+                        alert("12321321312312");
+                    }
+                }
+            });
+        });
+    });
+</script>
+<script>
+    $(document).ready(function () {
+        $(".register").click(function () {
+            window.location.href = "register.html";
+        });
+        $(".logo").click(function () {
+            window.location.href = "../index.html";
+        });
+        $(".forget").click(function () {
+            window.location.href = "forget.html";
+        });
+
+
+        $('input, textarea').placeholder();
+    });
+</script>
+
+</body>
+</html>

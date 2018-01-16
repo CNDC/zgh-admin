@@ -1,0 +1,35 @@
+language: java           #语言
+
+env:                          #环境
+  - DB=mysql              #使用mysql
+
+jdk:
+  - openjdk                #jdk使用openjdk
+
+mysql:
+  database: test         #数据库名为es
+  username: root     #用户名为root
+  password : root          #密码为空
+  encoding: utf8      #编码为utf8
+
+install:                     #安装时执行的脚本
+  - mvn install -Dmaven.test.skip=true    #mvn安装并跳过测试
+
+before_script:        #script之前执行的测试
+  - cd web
+  - mvn db:create  #创建数据库的mvn命令（此处使用了 maven-db-plugin 插件）
+  - mvn db:schema  #创建脚本的mvn命令
+  - mvn db:data        #安装数据的mvn命令
+  - cd ..
+
+script:                      #测试时执行的脚步
+  - cd common
+  - mvn test              #测试common子模块
+  - cd ..
+  - cd web
+  - mvn test -Pit       #测试web子模块，并指定使用it profile测试（即集成测试的配置，具体参考pom.xml中的profile/it）
+
+notifications:          #触发
+  email:
+    - 273754608@qq.com  #测试完成后测试报告发到哪
+    #- zhangkaitao0503@gmail.com
