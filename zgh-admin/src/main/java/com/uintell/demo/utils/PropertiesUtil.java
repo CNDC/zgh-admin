@@ -63,4 +63,8 @@ public class PropertiesUtil {
     public static Iterator<String> getKeys(String configName, String prefix) throws Exception {
         return getConfig(configName).getKeys(prefix);
     }
+
+    public static void main(String[] args) {
+        System.out.println(PropertiesUtil.getString("redis","Lifo"));
+    }
 }
