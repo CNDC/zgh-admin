@@ -27,7 +27,7 @@ import java.util.UUID;
  * @date 2018/1/4
  */
 @Controller
-@RequestMapping("/user/")
+@RequestMapping("/")
 public class LoginController extends BaseController {
 
     @Autowired
@@ -43,8 +43,23 @@ public class LoginController extends BaseController {
      */
     @RequestMapping("page/login")
     public String loginPage() {
-
         return "/page/login";
+    }
+
+    /**
+     * QQ 第三方进行登录
+     */
+    @RequestMapping("login/qq")
+    public String qq_login() {
+        return null;
+    }
+
+    /**
+     * WEIXIN 第三方进行登录
+     */
+    @RequestMapping("login/weixin")
+    public String weixin_login() {
+        return null;
     }
 
     /**
@@ -135,10 +150,15 @@ public class LoginController extends BaseController {
     @ResponseBody
     @RequestMapping("loginOut")
     public Map<String, Object> loginOut(HttpSession session) {
-        session.removeAttribute("admin");
-        Subject subject = SecurityUtils.getSubject();
-        subject.logout();
-        return null;
+        Map<String, Object> resultMap = new LinkedHashMap<String, Object>();
+        try {
+            //退出
+            SecurityUtils.getSubject().logout();
+        } catch (Exception e) {
+            System.err.println(e.getMessage());
+        }
+        //返回前端想要的数据.
+        return resultMap;
     }
 
     /**

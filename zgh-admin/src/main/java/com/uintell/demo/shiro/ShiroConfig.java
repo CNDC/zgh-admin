@@ -42,33 +42,32 @@ public class ShiroConfig {
 
     @Bean("shiroFilter")
     public ShiroFilterFactoryBean shirFilter(SecurityManager securityManager) {
-        ShiroFilterFactoryBean shiroFilter = new ShiroFilterFactoryBean();
-        shiroFilter.setSecurityManager(securityManager);
-        shiroFilter.setLoginUrl("/user/page");
+        ShiroFilterFactoryBean shiroFilterFactoryBean = new ShiroFilterFactoryBean();
 
-        //oauth过滤
-        /*Map<String, Filter> filters = new HashMap<>();
-        filters.put("oauth2", new OAuth2Filter());
-		shiroFilter.setFilters(filters);*/
+        // 必须设置 SecurityManager
+        shiroFilterFactoryBean.setSecurityManager(securityManager);
 
-        Map<String, String> filterMap = new LinkedHashMap<>();
-        filterMap.put("/login/*", "anon");
-        filterMap.put("/error", "anon");
-        filterMap.put("/api/**", "anon");
-        filterMap.put("/**/*.css", "anon");
-        filterMap.put("/**/*.js", "anon");
-        filterMap.put("/**/*.png", "anon");
-        filterMap.put("/**/*.jpg", "anon");
-        filterMap.put("/**/*.html", "anon");
-        filterMap.put("/**/*.html", "anon");
-        filterMap.put("/*/images/**", "anon");
-        filterMap.put("/fonts/**", "anon");
-        filterMap.put("/plugins/**", "anon");
-        filterMap.put("/favicon.ico", "anon");
-        filterMap.put("/**", "authc");
-        shiroFilter.setFilterChainDefinitionMap(filterMap);
+        shiroFilterFactoryBean.setLoginUrl("/page/login");
+        shiroFilterFactoryBean.setSuccessUrl("/index");
+        shiroFilterFactoryBean.setUnauthorizedUrl("/403");
 
-        return shiroFilter;
+        Map<String, String> filterChainDefinitionMap = new LinkedHashMap<String, String>();
+        // 配置不会被拦截的链接 顺序判断
+        filterChainDefinitionMap.put("/static/**", "anon");
+        filterChainDefinitionMap.put("/page/login", "anon");
+
+        // 配置退出过滤器,其中的具体的退出代码Shiro已经替我们实现了
+        filterChainDefinitionMap.put("/logout", "logout");
+
+        filterChainDefinitionMap.put("/add", "perms[权限添加]");
+
+        // <!-- 过滤链定义，从上向下顺序执行，一般将 /**放在最为下边 -->:这是一个坑呢，一不小心代码就不好使了;
+        // <!-- authc:所有url都必须认证通过才可以访问; anon:所有url都都可以匿名访问-->
+        filterChainDefinitionMap.put("/**", "authc");
+
+        shiroFilterFactoryBean.setFilterChainDefinitionMap(filterChainDefinitionMap);
+        System.out.println("Shiro拦截器工厂类注入成功");
+        return shiroFilterFactoryBean;
     }
 
     @Bean("lifecycleBeanPostProcessor")

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"/>
     <title>登录</title>
-    <link rel="stylesheet" href="../../static/css/login.css">
+    <link rel="stylesheet" href="/css/login.css"/>
 </head>
 <body>
 <div class="section sec-login">
@@ -12,11 +12,11 @@
         <h3 class="login-title">欢迎进入BIG3</h3>
         <div class="tel-inp inp">
             <i class="icon icon-input-email"></i>
-            <input type="tel" name="telephone" id="telephone" placeholder="手机号/邮箱" maxlength="11">
+            <input type="tel" name="telephone" id="telephone" placeholder="手机号/邮箱" maxlength="11"/>
         </div>
         <div class="pass-inp inp">
             <i class="icon icon-input-pass"></i>
-            <input type="password" name="password" id="password" placeholder="密码" maxlength="15">
+            <input type="password" name="password" id="password" placeholder="密码" maxlength="15"/>
         </div>
         <div class="login-btn">
             <button class="btn btn-login" id="login">登录</button>
@@ -34,9 +34,9 @@
         <p class="introduce">国内首家跨境电商知识分享交流平台</p>
     </div>
 </div>
-<script src="../../static/js/jquery-1.7.2.min.js"></script>
-<script src="../../static/js/placeholders.jquery.min.js"></script>
-<script src="../../static/js/main.js"></script>
+<script src="/js/jquery-1.7.2.min.js"></script>
+<script src="/js/placeholders.jquery.min.js"></script>
+<script src="/js/main.js"></script>
 <script>
     $(function () {
         $('#login').click(function () {
@@ -58,13 +58,17 @@
 <script>
     $(document).ready(function () {
         $(".register").click(function () {
-            window.location.href = "register.html";
+            window.location.href = "./register";
+        });
+        /*进行qq登录认证*/
+        $(".register").click(function () {
+            window.location.href = "./login/qq";
         });
         $(".logo").click(function () {
-            window.location.href = "../index.html";
+            window.location.href = "./index";
         });
         $(".forget").click(function () {
-            window.location.href = "forget.html";
+            window.location.href = "./forget";
         });
 
 
