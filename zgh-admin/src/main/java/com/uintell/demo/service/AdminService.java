@@ -1,6 +1,6 @@
 package com.uintell.demo.service;
 
-import com.uintell.demo.bean.Admin;
+import com.uintell.demo.bean.User;
 
 import java.util.List;
 import java.util.Map;
@@ -11,7 +11,7 @@ import java.util.Map;
  */
 public interface AdminService {
 
-    List<Admin> selectByMap(Map<String, Object> map);
+    List<User> selectByMap(Map<String, Object> map);
 
-    void updateById(Admin admin);
+    void updateById(User user);
 }

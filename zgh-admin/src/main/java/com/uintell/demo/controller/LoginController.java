@@ -41,7 +41,7 @@ public class LoginController extends BaseController {
      *
      * @return
      */
-    @RequestMapping("page/login")
+    @RequestMapping("user/login")
     public String loginPage() {
         return "/page/login";
     }

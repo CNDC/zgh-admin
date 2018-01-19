@@ -1,8 +1,5 @@
 package com.uintell.demo.shiro;
 
-import java.util.LinkedHashMap;
-import java.util.Map;
-
 import org.apache.shiro.mgt.SecurityManager;
 import org.apache.shiro.session.mgt.SessionManager;
 import org.apache.shiro.spring.LifecycleBeanPostProcessor;
@@ -15,6 +12,9 @@ import org.slf4j.LoggerFactory;
 import org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 /**
  * Shiro配置
@@ -47,7 +47,7 @@ public class ShiroConfig {
         // 必须设置 SecurityManager
         shiroFilterFactoryBean.setSecurityManager(securityManager);
 
-        shiroFilterFactoryBean.setLoginUrl("/page/login");
+        shiroFilterFactoryBean.setLoginUrl("/user/login");
         shiroFilterFactoryBean.setSuccessUrl("/index");
         shiroFilterFactoryBean.setUnauthorizedUrl("/403");
 

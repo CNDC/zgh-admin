@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="MenuMapper">
+    <!-- <resultMap id="BaseResultMap" type="com.uintell.demo.bean.Menu">
+         <id column="id" property="id" jdbcType="BIGINT"/>
+         <result column="menu_name" property="userName" jdbcType="VARCHAR"/>
+         <result column="menu_parent_id" property="parentId" jdbcType="VARCHAR"/>
+         <result column="user_real_name" property="parentName" jdbcType="VARCHAR"/>
+         <result column="user_phone" property="name" jdbcType="VARCHAR"/>
+         <result column="user_desc" property="icon" jdbcType="VARCHAR"/>
+         <result column="create_by" property="url" jdbcType="VARCHAR"/>
+         <result column="user_create" property="status" jdbcType="TIMESTAMP"/>
+         <result column="modified_by" property="type" jdbcType="VARCHAR"/>
+         <result column="user_modified" property="btnCode" jdbcType="TIMESTAMP"/>
+         <result column="is_valid" property="ordering" jdbcType="BIT"/>
+         <result column="is_valid" property="createTime" jdbcType="BIT"/>
+         <result column="is_valid" property="createUser" jdbcType="BIT"/>
+         <result column="is_valid" property="updateTime" jdbcType="BIT"/>
+         <result column="is_valid" property="updateUser" jdbcType="BIT"/>
+     </resultMap>
+
+     <sql id="Base_Column_List">
+         id, user_name, user_password, user_real_name, user_phone, user_desc, create_by, user_create,
+         modified_by, user_modified, is_valid, company_code
+     </sql>
+
+     <sql id="selectAdminByUsernameAndPassword">
+         SELECT
+         <include refid="Base_Column_List"/>
+         from zgh_user where user_name=#{username,jdbcType=varchar} and user_password=#{password,jdbcType=varchar}
+     </sql>-->
+</mapper>
