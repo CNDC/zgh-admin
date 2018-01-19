@@ -3,21 +3,28 @@ package com.uintell.demo.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 
 /**
  * Created by chen on 2017/10/22.
  */
 @Controller
-@RequestMapping("/index/")
+@RestController
 public class IndexController extends BaseController {
+
+    @RequestMapping("/error500")
+    public void index1() {
+        int a = 1 / 0;
+        System.out.println(a);
+    }
 
     /**
      * 首页
      *
      * @return
      */
-    @RequestMapping("index")
+    @RequestMapping("/")
     public String index() {
         return "index";
     }
@@ -32,11 +39,6 @@ public class IndexController extends BaseController {
         return "index_tab";
     }
 
-    @RequestMapping("main")
-    public String main(Model model) {
-
-        return "main";
-    }
 
     /**
      * 获取菜单

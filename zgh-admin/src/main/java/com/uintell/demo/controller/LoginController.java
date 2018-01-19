@@ -32,8 +32,6 @@ import java.util.UUID;
 @RequestMapping("/user/")
 public class LoginController extends BaseController {
 
-    private static final Logger logger = Logger.getLogger(LoginController.class);
-
     @Autowired
     private IRedisService redisService;
 
