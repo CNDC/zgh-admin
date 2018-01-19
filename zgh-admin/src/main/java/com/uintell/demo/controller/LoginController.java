@@ -1,13 +1,11 @@
 package com.uintell.demo.controller;
 
 import com.uintell.demo.redis.service.IRedisService;
-import com.uintell.demo.service.MenuService;
 import com.uintell.demo.utils.Constants;
 import com.uintell.demo.utils.DESPcUtil;
 import com.uintell.demo.utils.DateUtil;
 import com.uintell.demo.utils.DateUtils;
 import org.apache.commons.lang3.StringUtils;
-import org.apache.log4j.Logger;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.session.Session;
@@ -35,8 +33,8 @@ public class LoginController extends BaseController {
     @Autowired
     private IRedisService redisService;
 
-    @Autowired
-    private MenuService menuService;
+  /*  @Autowired
+    private MenuService menuService;*/
 
     /**
      * 跳转登录页
