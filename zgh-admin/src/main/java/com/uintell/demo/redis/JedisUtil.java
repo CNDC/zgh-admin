@@ -1,6 +1,6 @@
 package com.uintell.demo.redis;
 
-import com.uintell.demo.redis.config.RedisProperties;
+import com.uintell.demo.conf.RedisProperties;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -13,7 +13,6 @@ import java.util.Set;
 
 @Configuration
 public class JedisUtil {
-
     private static RedisProperties redisProperties;
 
     @Autowired
@@ -32,5 +31,4 @@ public class JedisUtil {
         }
         return new JedisCluster(nodes, redisProperties.getCommandTimeout());
     }
-
 }
